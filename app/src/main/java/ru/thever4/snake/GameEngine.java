@@ -6,7 +6,6 @@ import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.graphics.Path;
 import android.graphics.Point;
 import android.os.Build;
 import android.view.View;
@@ -63,10 +62,12 @@ public class GameEngine {
             timer.cancel();
         timer = new Timer();
         timer.schedule(new GamePerformer(), 250, 250);
-        //TODO Create and start timer!!! (run repaint())
         createApple();
     }
 
+    public int getScore() {
+        return this.dotsCount;
+    }
 
     private void loadImages() {
         dot = BitmapFactory.decodeResource(context.getResources(), R.drawable.dot);
@@ -151,10 +152,18 @@ public class GameEngine {
             paint.setTextAlign(Paint.Align.CENTER);
             canvas.drawText(str, SIZE/2, SIZE/2, paint);
         }
-        Paint p = new Paint();
-        p.setColor(Color.BLUE);
-        p.setStyle(Paint.Style.STROKE);
-        canvas.drawRect(0, 0, SIZE, SIZE, p);
+        Paint border = new Paint();
+        border.setColor(Color.BLUE);
+        border.setStyle(Paint.Style.STROKE);
+        canvas.drawRect(0, 0, SIZE, SIZE, border);
+        Paint scoreText = new Paint();
+        scoreText.setColor(Color.BLACK);
+        scoreText.setTextSize(48);
+        scoreText.setTextAlign(Paint.Align.CENTER);
+        canvas.drawText(String.format("%s %d", context.getResources().getText(R.string.score).toString(), getScore()),
+                this.SIZE/2,
+                this.SIZE,
+                scoreText);
     }
 
     public enum Direction {

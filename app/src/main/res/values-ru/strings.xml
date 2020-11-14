@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Змейка</string>
+    <string name="score">"Ваш результат: "</string>
+    <string name="about">Подробнее</string>
+</resources>

@@ -6,30 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".Menu">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="120dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/iit_logo" />
-
-    <Button
-        android:id="@+id/button"
+    <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="159dp"
-        tools:layout_editor_absoluteY="251dp" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="159dp"
-        tools:layout_editor_absoluteY="251dp" />
+        android:text="Hello, world!"
+        tools:layout_editor_absoluteX="175dp"
+        tools:layout_editor_absoluteY="291dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

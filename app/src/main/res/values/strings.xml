@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">Snake</string>
-    <string name="score">Your score: </string>
+    <string name="score">Your length: </string>
     <string name="about">Learn more</string>
+    <string name="aboutUsMessage">\tHi! If you are reading this text, seems you was at our master class in your school, which created specially for you by students of Institute of information technologies of CSU. \n\tHonestly, we hope you have enjoyed the process of creating this application. Do you want to make it better? The link to the sources below. \n\tDo you want to make something cooler than snake-game? Then come to us to IIT! We\'re waiting for you!</string>
+    <string name="buttonToIIT">Get to know us more</string>
+    <string name="buttonToGithub">This game sources</string>
 </resources>
